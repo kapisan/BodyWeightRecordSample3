@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57BABAF9070A3373954621FF /* Pods_BodyWeightRecordSample3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1082B73A4FAC7DDE87BB2E32 /* Pods_BodyWeightRecordSample3.framework */; };
 		792A18D826C7B841001F407D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792A18D726C7B841001F407D /* AppDelegate.swift */; };
 		792A18DA26C7B841001F407D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792A18D926C7B841001F407D /* SceneDelegate.swift */; };
 		792A18DC26C7B841001F407D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792A18DB26C7B841001F407D /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1082B73A4FAC7DDE87BB2E32 /* Pods_BodyWeightRecordSample3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BodyWeightRecordSample3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DA94C34A4E4C8A4A26AB627 /* Pods-BodyWeightRecordSample3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BodyWeightRecordSample3.debug.xcconfig"; path = "Target Support Files/Pods-BodyWeightRecordSample3/Pods-BodyWeightRecordSample3.debug.xcconfig"; sourceTree = "<group>"; };
 		792A18D426C7B841001F407D /* BodyWeightRecordSample3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BodyWeightRecordSample3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		792A18D726C7B841001F407D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		792A18D926C7B841001F407D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		792A18E026C7B844001F407D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		792A18E326C7B844001F407D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		792A18E526C7B844001F407D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D839EB558E7B37C8FBA53F5C /* Pods-BodyWeightRecordSample3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BodyWeightRecordSample3.release.xcconfig"; path = "Target Support Files/Pods-BodyWeightRecordSample3/Pods-BodyWeightRecordSample3.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57BABAF9070A3373954621FF /* Pods_BodyWeightRecordSample3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				792A18D626C7B841001F407D /* BodyWeightRecordSample3 */,
 				792A18D526C7B841001F407D /* Products */,
+				B7F8C1475B3F61B6F93F986C /* Pods */,
+				E3AE2E10E0B194EA1599706D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = BodyWeightRecordSample3;
 			sourceTree = "<group>";
 		};
+		B7F8C1475B3F61B6F93F986C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5DA94C34A4E4C8A4A26AB627 /* Pods-BodyWeightRecordSample3.debug.xcconfig */,
+				D839EB558E7B37C8FBA53F5C /* Pods-BodyWeightRecordSample3.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E3AE2E10E0B194EA1599706D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1082B73A4FAC7DDE87BB2E32 /* Pods_BodyWeightRecordSample3.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 792A18E826C7B844001F407D /* Build configuration list for PBXNativeTarget "BodyWeightRecordSample3" */;
 			buildPhases = (
+				E214F3A3EFE711E757A1AD38 /* [CP] Check Pods Manifest.lock */,
 				792A18D026C7B841001F407D /* Sources */,
 				792A18D126C7B841001F407D /* Frameworks */,
 				792A18D226C7B841001F407D /* Resources */,
+				8BEA16DE6470027ED52350EB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8BEA16DE6470027ED52350EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BodyWeightRecordSample3/Pods-BodyWeightRecordSample3-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BodyWeightRecordSample3/Pods-BodyWeightRecordSample3-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BodyWeightRecordSample3/Pods-BodyWeightRecordSample3-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E214F3A3EFE711E757A1AD38 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BodyWeightRecordSample3-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		792A18D026C7B841001F407D /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		792A18E926C7B844001F407D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DA94C34A4E4C8A4A26AB627 /* Pods-BodyWeightRecordSample3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +371,7 @@
 		};
 		792A18EA26C7B844001F407D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D839EB558E7B37C8FBA53F5C /* Pods-BodyWeightRecordSample3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
