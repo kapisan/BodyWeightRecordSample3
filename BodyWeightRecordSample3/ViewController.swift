@@ -6,20 +6,16 @@
 //
 
 import UIKit
+import RealmSwift
 
-struct Item {
-    let dateString: String
-    let title: String
-
-    init(dateString: String, title: String) {
-        self.dateString = dateString
-        self.title = title
-    }
+class Item:Object {
+    @objc dynamic var dateString = ""
+    @objc dynamic var title = ""
 }
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
-    var todoItem = [Item]()
+    var todoItem: Results<Item>!
 
     @IBOutlet private weak var textField: UITextField!
     @IBOutlet private weak var tableView: UITableView!
@@ -29,6 +25,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.textField.delegate = self
+
+        do {
+            let realm = try Realm()
+            self.todoItem = realm.objects(Item.self)
+        } catch  {
+            print("error")
+        }
 
         tableView.reloadData()
     }
@@ -53,6 +56,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
 
+    //cellの値とrealmから対象のデータを削除する
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let realm = try! Realm()
+            try! realm.write {
+                realm.delete(todoItem[indexPath.row])
+            }
+            tableView.reloadData()
+        }
+    }
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -65,8 +79,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yyMMdd", options: 0, locale: Locale(identifier: "ja_JP"))
         let dateString = dateFormatter.string(from: date)
-        let textFieldItem: Item = Item(dateString: dateString, title: title)
-        todoItem.append(textFieldItem)
+//        let textFieldItem: Item = Item(dateString: dateString, title: title)
+//        todoItem.append(textFieldItem)
+        let todoItem = Item()
+        todoItem.dateString = dateString
+        todoItem.title = title
+
+        //Realm Swiftにデータを入れる
+        let realm = try! Realm()
+
+        try! realm.write {
+            realm.add(todoItem)
+        }
         textField.text = ""
         tableView.reloadData()
 
